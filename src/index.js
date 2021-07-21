@@ -4,6 +4,10 @@ import getRefs from './js/refs'
 
 import galleryTpl from './templates/galleryTpl.hbs'
 
+import { error, notice } from "@pnotify/core";
+import "@pnotify/core/dist/PNotify.css";
+import "@pnotify/core/dist/BrightTheme.css";
+
 
 
 const getPicturesFromAPI = new GetPicturesFromAPI();
