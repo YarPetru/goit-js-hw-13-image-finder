@@ -3,18 +3,44 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Заголовок страницы</title>
+    <title>Gallery</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
       integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
       crossorigin="anonymous"
     />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
   </head>
   <body>
     <!-- Так добавляются фрагменты в главные HTML-файлы страниц. -->
-    <include src="./partials/example.html"></include>
+    <!-- <include src="./partials/example.html"></include> -->
 
+        <main>
+          <div class="container">
+            
+            <form class="search-form" id="search-form">
+              <input type="text" name="query" autocomplete="off" placeholder="Search images..." />
+            </form>
+            
+        
+            <ul class="gallery"></ul>
+            
+            
+            <div class="loader loader-js is-hidden"></div>
+            <button type="button" class="button is-hidden" data-action="load-more">
+              Show more
+            </button>
+        
+            <button type="button" class="material-icons down down-js">
+              arrow_downward
+            </button>
+        
+            <button type="button" class="material-icons up up-js">
+              arrow_upward
+            </button>
+          </div>
+        </main>
     <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
     <script src="./index.js"></script>
   </body>
